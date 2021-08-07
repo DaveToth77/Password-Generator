@@ -18,4 +18,44 @@ function generatePassword() {
   if (upper != true && lower != true && number != true && special != true) {
       alert("You must select at least one character type!")
   }
+  // character assignment with randomization feature
+
+  let password = '';
+
+  let availableCharacters = '';
+
+  let charactersUpper = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+
+  let charactersLower = 'qwertyuiopasdfghjklzxcvbnm';
+
+  let charactersNumber = '1234567890';
+
+  let charactersSpecial = '"!@#$%^&*(){}[]=<>/,.';
+  charactersSpecial.charAt(Math.floor(Math.random() * (charactersSpecial.length)));
+  if (upper) {
+      availableCharacters = availableCharacters + charactersUpper;
+      password = password + charactersUpper.charAt(Math.floor(Math.random() * (charactersUpper.length)));
+  }
+  if (lower) {
+      availableCharacters = availableCharacters + charactersLower;
+      password = password + charactersLower.charAt(Math.floor(Math.random() * (charactersLower.length)));
+  }
+  if (number) {
+      availableCharacters = availableCharacters + charactersNumber;
+      password = password + charactersNumber.charAt(Math.floor(Math.random() * (charactersNumber.length)));
+  }
+  if (special) {
+      availableCharacters = availableCharacters + charactersSpecial;
+      password = password + charactersSpecial.charAt(Math.floor(Math.random() * (charactersSpecial.length)));
+  }
+
+  for (let i = password.length; i < passwordLength; i++) {
+      let randomIndex = Math.floor(Math.random() * availableCharacters.length)
+      let randomCharacter = availableCharacters.charAt(randomIndex);
+
+      password = password + randomCharacter;
+  }
+
+  return password;
+}
 
