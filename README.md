@@ -85,7 +85,7 @@ A browser based random password generator that lets you pick password length, up
 
 ## Contact
 
-Dave Toth - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Dave Toth - [@twitter_handle](https://twitter.com/twitter_handle) - email - <davetoth77@gmail.com>
 
 Project Link: [https://github.com/DaveToth77/challenge-3](https://github.com/github_username/repo_name)
 
